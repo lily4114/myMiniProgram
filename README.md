@@ -1,2 +1,2 @@
 # myMiniProgram
-我的小程序
+小程序

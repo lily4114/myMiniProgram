@@ -1,17 +1,17 @@
 /**index.wxss**/
 .list{
   background: #fff;
-  padding: 4% 0;
+  padding: 2% 0;
 }
 .trip{
   width:92%;
-  margin: 0 auto;  
+  margin: 2% auto;  
   position: relative;
 }
 .trip-img{
   width: 100%;
   height: 352rpx;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .trip-text{
   width: 100%;
@@ -21,29 +21,54 @@
   top: 0;
   left: 0;
 }
+.trip-text-box{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 .trip-title{
-  padding: 2% 3% 1%;
+  padding: 2% 4% 0;
   font-weight: bold;
   font-size: 32rpx;
-}
-.trip-user .user-img{
-  width: 68rpx;
-  height: 68rpx;
-  border-radius: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
 }
 .trip-details{
-  font-size: 16rpx;
-  margin-left:3%; 
-  padding-left: 10rpx;
+  font-size:18rpx;
+  margin-left:4%; 
+  margin-top: 1%;
+  padding-left: 15rpx;
   position: relative;
 }
 .trip-details::before{
   content: '';
   display: inline-block;
-  width: 5rpx;
-  height: 80%;
-  border-left: 5rpx solid red;
+  width: 10rpx;
+  height: 100%;
+  border-left: 6rpx solid #4abdcc;
   position: absolute;
   top: 3rpx;
   left: 0;
+}
+.trip-user{
+  margin-left:4%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  font-size:22rpx;
+}
+.trip-user .user-img{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 15rpx;
+}
+.bottom-text{
+  font-size: 24rpx;
+  text-align: center;
+  margin: 3% 0 0;
 }

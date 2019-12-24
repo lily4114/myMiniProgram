@@ -1,0 +1,9 @@
+<!--components/toast/toast.wxml-->
+<popup class='popup-box'>
+  <view class="popup-title">提示</view>
+  <view class="content">出错</view>
+  <view class="button">
+    <text bindtap='_sure'>确定</text>
+    <text bindtap='_cancael'>取消</text>
+  </view>
+</popup> 

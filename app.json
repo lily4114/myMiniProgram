@@ -1,9 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/explore/explore",
-    "components/trip/trip"
+    "pages/explore/explore"
   ],
   "window": {
     "navigationBarTextStyle": "white",

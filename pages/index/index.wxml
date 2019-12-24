@@ -1,13 +1,23 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<scroll-view class="list">
+  <view class="trip">
+    <image src="../../images/paris.jpg" class="trip-img"></image>
+    <view class="trip-text">
+      <view class="trip-title">巴黎-圣山摄行</view>
+      <view class="trip-details">
+        <view class="trip-d1">
+          <text>2019.12.12</text>          
+          <text> 9天 </text>          
+          <text>12000次浏览</text>
+        </view>
+        <view class="trip-d2">法国巴黎</view>
+      </view>
+      <view class="trip-user">
+        <image src="../../images/user.jpg" class="user-img"></image>
+        <text>by </text>
+        <text>晨曦</text>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+  
+</scroll-view>

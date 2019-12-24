@@ -1,13 +1,32 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/explore/explore",
+    "components/trip/trip"
   ],
   "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#4abdcc",
+    "navigationBarTitleText": "面包旅行",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "images/index_normal.png",
+        "selectedIconPath": "images/index_pressed.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "发现",
+        "iconPath": "images/explore_normal.png",
+        "selectedIconPath": "images/explore_pressed.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

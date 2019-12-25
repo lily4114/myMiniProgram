@@ -79,25 +79,26 @@ Page({
     //     }
     //   })
     // }
+    this.loadMore();
   },
-
-  //弹出框
-  showToast:function(){
-    // wx.showModal({
-    //   title: '提示',
-    //   content: '出错',
-    // })
-    wx.showToast({
-      title: '提示',
-    })
-    //console.log(1111)
+  //下拉动作
+  onPullDownRefresh:function(){
+    this.loadMore();
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  //加载推荐列表
+  loadMore:function(){
+    //console.log('加载更多~')
+    wx.request({
+      url: 'http://api.breadtrip.com/v2/index',
+      method:'post',
+      data:{},
+      header:{
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      success:function(res){
+        console.log(res);
+      }
     })
   }
 })

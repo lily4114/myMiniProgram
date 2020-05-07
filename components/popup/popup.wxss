@@ -1,0 +1,9 @@
+/* components/toast/toast.wxss */
+.popup-box{
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  padding: 3%;
+  border-radius:5rpx;
+  z-index: 99;
+}

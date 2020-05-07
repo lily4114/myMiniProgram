@@ -1,21 +1,32 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
+const api=require('../../utils/api.js');
 
 Page({
   data: {
     motto: 'Hello！',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    tripInfo:[
+      {
+        title:'巴黎-圣山摄行',
+        time:'2019.12.12',
+        visitor:'15263',
+        country:'法国',
+        city:'巴黎',
+        userInfo: ['../../images/user.jpg','晨曦']
+      }
+    ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  onShow(){
+    //检查登录
+    api.checkLogin();
   },
+  
   onLoad: function () {
+    //api.checkLogin();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -42,13 +53,28 @@ Page({
         }
       })
     }
+
+    //请求数据
+    let params={
+      data: '',
+      method: 'get',
+    }
+    let list = api.getHotTripList(params);
+    console.log(list);
   },
+  //事件处理函数
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  //跳转搜索界面
+  gotoSearch:function(){
+    wx.navigateTo({
+      url: '../login/login',
     })
   }
 })

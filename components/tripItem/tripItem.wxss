@@ -1,0 +1,57 @@
+/* components/tripItem/tripItem.wxss */
+
+.trip{
+  width:92%;
+  height: 100%;
+  margin: 0 auto;  
+  position: relative;
+  
+}
+.trip-img{
+  width: 100%;
+  height: 352rpx;
+  border-radius: 3px;
+}
+.trip-text{
+  width: 100%;
+  height:352rpx;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.trip-title{
+  padding: 4% 0% 2% 4%;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.trip-details{
+  font-size: 20rpx;
+  margin-left: 4%;
+  padding-left: 12rpx;
+  position: relative;
+}
+.trip-details::before{
+  content: '';
+  display: inline-block;
+  width: 6rpx;
+  height: 90%;
+  border-left: 6rpx solid #4ABDCC;
+  position: absolute;
+  top: 3rpx;
+  left: 0;
+}
+.trip-user{
+  position: absolute;
+  bottom: 0;
+  font-size: 20rpx;
+  padding: 0 0 3.5% 4%;
+}
+.trip-user .user-img{
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}

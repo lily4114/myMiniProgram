@@ -1,0 +1,4 @@
+<!--pages/find/find.wxml-->
+<view>
+  <navigator hover-class="none" target="miniProgram" open-type="exit" bindtap="tip">退出登录</navigator>
+</view>

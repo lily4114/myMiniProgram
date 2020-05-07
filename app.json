@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/explore/explore",
-    "components/trip/trip"
+    "pages/myInfo/myInfo",
+    "pages/search/search",
+    "components/tripItem/tripItem",
+    "pages/login/login"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -21,8 +22,8 @@
         "selectedIconPath": "images/index_pressed.png"
       },
       {
-        "pagePath": "pages/explore/explore",
-        "text": "发现",
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "我的",
         "iconPath": "images/explore_normal.png",
         "selectedIconPath": "images/explore_pressed.png"
       }

@@ -62,5 +62,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  tip(){
+    console.log('退出成功~')
   }
 })
